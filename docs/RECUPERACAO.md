@@ -21,6 +21,8 @@ FEL não foi validado: a interface observada devolveu ACK zero inválido. Testes
 2. `02-ORIGINAL-2025`: 29 arquivos originais e manifesto.
 3. `03-DSU-AUTENTICADA`: GSI temporária autenticada e recibos dos ensaios.
 
+Essa é a seleção inicial de imagens. A [consolidação completa](BACKUP-PRIVADO.md) acrescenta as chaves criptografadas e todos os insumos locais de reprodução, mantendo uma única pasta para copiar. Use `MANIFESTO-COMPLETO.json` e o restaurador para conferir o conjunto completo, não apenas os 41 arquivos iniciais.
+
 Arquivos grandes usam hardlinks no mesmo volume para economizar espaço. Copiar normalmente a pasta para outro disco produz a cópia independente; conferir os hashes na cópia. Não editar esses links locais. A pasta organizada no mesmo disco ainda não é um segundo backup.
 
 Nunca gravar a GSI DSU em partição física. Não executar o ZIP de partições como OTA/PhoenixSuit. A restauração exige conferir unidade, revisão de hardware, serial explícito, slot, GPT, capacidade e hashes; não apagar userdata ou trocar slot como tentativa genérica.

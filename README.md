@@ -40,4 +40,6 @@ Sem essa variável, o identificador de segurança é deliberadamente inválido. 
 
 O backup bruto original de 2025, DSU autenticada para este PC, logs, dados individuais e chaves privadas ficam fora do Git/Release. Na máquina de origem, `PARA-BACKUP/` reúne a customizada, 29 arquivos originais e a DSU, com manifesto e hashes. Essa pasta precisa ser copiada para outro disco para se tornar um backup independente.
 
+A [organização completa do backup privado](docs/BACKUP-PRIVADO.md) reúne também fontes locais, artefatos de construção, pacotes USB e chaves criptografadas em uma única pasta, com conteúdo deduplicado, mapa de restauração e bundle offline do Git.
+
 App da Central e kiosk são instalados/configurados separadamente pelo instalador do aplicativo. Não estão embutidos nesta imagem.

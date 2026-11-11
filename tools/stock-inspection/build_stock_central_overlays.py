@@ -168,7 +168,7 @@ def main():
     assets = OUT / 'assets'
     assets.mkdir()
     assert ANDROID.exists()
-    css = Path('C:/Users/Jonathan/projetos/home-lab/modules/central/app/web/estilo.css').read_text(encoding='utf-8')
+    css = (BASE / 'aprovado-v2/estilo-referencia.css').read_text(encoding='utf-8')
     css = css[css.index(':root{'):css.index('}', css.index(':root{'))]
     palette = dict(re.findall(r'--([\w-]+):\s*(#[0-9a-fA-F]{6})', css))
     assert palette['bg'] == '#0b1620' and palette['acc2'] == '#60a5fa'
