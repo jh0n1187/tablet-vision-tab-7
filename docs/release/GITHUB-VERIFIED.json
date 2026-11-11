@@ -1,0 +1,39 @@
+{
+  "repo": "jh0n1187/tablet-vision-tab-7",
+  "tag": "central-v3-recursos-r4",
+  "public": true,
+  "url": "https://github.com/jh0n1187/tablet-vision-tab-7/releases/tag/central-v3-recursos-r4",
+  "all_five_asset_sha256_match_github": true,
+  "assets": [
+    {
+      "name": "T307F-Central-Inteligente-v3-particoes.zip",
+      "size": 1156783101,
+      "sha256": "ee8ab269738765f5dab7e7a113a6698b920b0088d7cd12fe8ee7c80cd10f6cf1",
+      "remote_digest_matches": true
+    },
+    {
+      "name": "T307F-Central-Inteligente-v3-particoes.zip.sha256",
+      "size": 110,
+      "sha256": "69e83b75b1cd045475b6230bd4f39ea2c1f2369f24bd4177689d0fbd35a66c1c",
+      "remote_digest_matches": true
+    },
+    {
+      "name": "MANIFESTO.json",
+      "size": 6974,
+      "sha256": "8b3ac724d28200860dfb1bf3afb8031650ba930738548cf3afefa20f9e01f0bf",
+      "remote_digest_matches": true
+    },
+    {
+      "name": "LEIA-ME.md",
+      "size": 4220,
+      "sha256": "15e1a324729ad5b367febe1b7eab2aacdd13eba5a793b15ac4ee363a0ae08d81",
+      "remote_digest_matches": true
+    },
+    {
+      "name": "PACKAGE-VERIFIED.json",
+      "size": 376,
+      "sha256": "f6333394db308afbd95c1f24d9684832dd0c7ccb355e65ac14e0ac39449dc811",
+      "remote_digest_matches": true
+    }
+  ]
+}
