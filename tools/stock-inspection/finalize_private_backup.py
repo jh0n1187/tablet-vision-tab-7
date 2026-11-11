@@ -26,7 +26,7 @@ def main():
     folder = BACKUP / '05-REPRODUCAO'
     bundle = folder / 'projeto-fontes.bundle'
     if not bundle.exists():
-        subprocess.run(['git', 'bundle', 'create', str(bundle), '--all'], check=True, cwd=ROOT)
+        subprocess.run(['git', 'bundle', 'create', str(bundle), 'main'], check=True, cwd=ROOT)
     else:
         refs = subprocess.check_output(['git', 'bundle', 'list-heads', str(bundle)], cwd=ROOT, text=True)
         current = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
