@@ -106,7 +106,10 @@ def main():
         raise ValueError('Expected a clone of the tablet project')
     written = restore(backup, destination, index)
     print(f'Restored {written} files; no device commands executed.')
-    print('Restore encrypted keys separately with portable_private_keys.ps1 -Mode Restore.')
+    if index.get('portable_keys_included'):
+        print('Restore encrypted keys separately with portable_private_keys.ps1 -Mode Restore.')
+    else:
+        print('Private keys omitted by user choice; already signed images are retained.')
 
 
 if __name__ == '__main__':

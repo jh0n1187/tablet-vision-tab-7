@@ -1,17 +1,17 @@
 # Uma única pasta para o backup externo
 
-Copie somente **PARA-BACKUP inteira** para um HD externo ou armazenamento privado. O conjunto reúne as imagens finais, backup original, DSU, insumos locais de construção, metadados e pacote criptografado de chaves. Os arquivos de trabalho podem continuar em `backup/` e `analise-firmware/`; não é necessário copiar essas pastas separadamente depois da consolidação completa.
+Copie somente **PARA-BACKUP inteira** para um HD externo ou armazenamento privado. O conjunto reúne as imagens finais, backup original, DSU, insumos locais de construção e metadados. **As chaves privadas foram omitidas por escolha do usuário; não é necessária senha para copiar este conjunto.** Os arquivos de trabalho podem continuar em `backup/` e `analise-firmware/`; não é necessário copiar essas pastas separadamente depois da consolidação completa.
 
 | Pasta/arquivo | Conteúdo |
 | --- | --- |
 | `01-CUSTOMIZADA` | ZIP final revisão 4, FAT separada e hashes |
 | `02-ORIGINAL-2025` | Backup OEM adquirido e verificado |
 | `03-DSU-AUTENTICADA` | GSI temporária autenticada e recibos |
-| `04-CHAVES` | Chaves de assinatura e ADB criptografadas por senha portátil |
+| `04-CHAVES` (opcional) | Omitida nesta cópia; pode ser criada por exportação criptografada futura |
 | `05-REPRODUCAO` | Fontes Git em bundle, restaurador e objetos privados deduplicados |
 | `MANIFESTO-COMPLETO.json` | Mapa de conteúdos, caminhos de restauração e SHA256 |
 
-O conjunto é privado e não deve ser publicado. A senha do pacote de chaves deve ficar no seu gerenciador de senhas, separada do HD. Não há senha ou chave privada em texto no Git. Não basta copiar apenas o antigo manifesto de 41 arquivos: a consolidação acrescenta os insumos de reprodução e o manifesto completo.
+O conjunto é privado e não deve ser publicado. Não há senha ou chave privada em texto no Git. Não basta copiar apenas o antigo manifesto de 41 arquivos: a consolidação acrescenta os insumos de reprodução e o manifesto completo. As imagens já assinadas podem ser reaplicadas sem a chave privada. Novas assinaturas exigem chave nova ou a chave mantida no PC original; para outro PC, a DSU antiga pode precisar ser reconstruída para autorizar a nova chave pública ADB.
 
 ## Verificar a cópia no HD
 
@@ -33,7 +33,7 @@ python E:\PARA-BACKUP\05-REPRODUCAO\restaurar.py --backup E:\PARA-BACKUP --desti
 
 O restaurador confere todo o backup antes de escrever, preserva arquivos existentes diferentes e ajusta os dois arquivos de localização do backup à pasta nova. Não executa ADB/fastboot. Os caminhos e arquivos de origem são restaurados a partir do mapa, sem exigir nomes legíveis nos objetos deduplicados.
 
-Para restaurar a mesma identidade de assinatura no novo perfil Windows, use **PowerShell 7** e informe a senha apenas na janela local:
+Somente se tiver feito uma exportação OPCIONAL das chaves, é possível restaurar a mesma identidade de assinatura no novo perfil Windows usando **PowerShell 7** e senha na janela local. Essa etapa não se aplica ao backup atual sem chaves:
 
 ```powershell
 C:\projetos\tablet-positivo\tools\stock-inspection\portable_private_keys.ps1 -Mode Restore -Bundle E:\PARA-BACKUP\04-CHAVES\central-private-keys.encrypted.json -ProjectRoot C:\projetos\tablet-positivo
