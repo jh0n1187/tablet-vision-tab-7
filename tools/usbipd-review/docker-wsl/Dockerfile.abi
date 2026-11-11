@@ -1,0 +1,7 @@
+FROM tablet-usbmon-test:prepared
+USER 0:0
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends gcc libc6-dev linux-libc-dev
+COPY native_abi_probe.c /tmp/native_abi_probe.c
+RUN gcc -std=c11 -Wall -Wextra -Werror /tmp/native_abi_probe.c -o /usr/local/bin/usbfs-abi-probe
+USER 65534:65534
+ENTRYPOINT ["python"]

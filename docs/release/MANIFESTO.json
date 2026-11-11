@@ -1,0 +1,191 @@
+{
+  "name": "Central Inteligente T307F v3",
+  "base": "T307TSF.BR.OPEN.2025092701",
+  "android": "14",
+  "security_patch": "2025-08-05",
+  "hardware": "This acquired T307F A523 / AIC8800 unit",
+  "format": "Native active-slot partition images; NOT an OTA or PhoenixSuit IMAGEWTY container",
+  "created_utc": "2026-11-11T03:58:09.293104+00:00",
+  "theme": {
+    "dark_default": true,
+    "palette": {
+      "bg": "#0b1620",
+      "card": "#102233",
+      "card2": "#14293c",
+      "ink": "#e6edf3",
+      "mut": "#8b9bab",
+      "vermelho": "#FF4D5E",
+      "verde": "#3FDC7E",
+      "amarelo": "#FFD45B",
+      "ciano": "#24DAFF",
+      "acc": "#a78bfa",
+      "acc2": "#60a5fa",
+      "ok": "#3fb950",
+      "warn": "#d29922",
+      "bad": "#f85149"
+    },
+    "font": "Native Android Roboto; Noto/emoji/fallbacks preserved",
+    "stock_audio_files": 31,
+    "bloat_packages_removed": 49,
+    "new_executable_services": 0
+  },
+  "security": {
+    "avb_flags": 0,
+    "verity": "enforcing",
+    "selinux": "Enforcing",
+    "adb_auth": true,
+    "normal_user_build": true,
+    "bootloader": "unlocked; orange state retained; warning BMP replaced by Central splash"
+  },
+  "physical_validation": {
+    "all_seven_changed_partitions_full_sha256_match": true,
+    "two_normal_boots": true,
+    "wifi_reconnected": true,
+    "speaker_and_microphone_routes_configured": true,
+    "physical_audio_recording_test": false
+  },
+  "excluded": "No userdata, credentials, signing private keys, individual storage, GPT, TOC/U-Boot, eFuses or RPMB",
+  "files": [
+    {
+      "archive": "images/system.img",
+      "target": "system_a",
+      "size": 1045729280,
+      "sha256": "38b3192471b547b6c459de3debe4817f5e018e2d90773f7ea424d93cef1e8bb5",
+      "modified": true,
+      "role": "Final custom payload"
+    },
+    {
+      "archive": "images/product.img",
+      "target": "product_a",
+      "size": 1390243840,
+      "sha256": "21c86cdd17f1a3c036aa56df9b40e7769e23384f5d80fd25f9ec34d87dc2c210",
+      "modified": true,
+      "role": "Final custom payload"
+    },
+    {
+      "archive": "images/vendor.img",
+      "target": "vendor_a",
+      "size": 111222784,
+      "sha256": "e107cc494f162344d3899c1190ac56ad595400cbf0fb0cc5a6e842b1ae532aec",
+      "modified": true,
+      "role": "Final custom payload"
+    },
+    {
+      "archive": "images/vbmeta.img",
+      "target": "vbmeta_a",
+      "size": 131072,
+      "sha256": "9974e6c10ad862a2ede76af113892065f66710509486118260c161113ac9c54d",
+      "modified": true,
+      "role": "Final custom payload"
+    },
+    {
+      "archive": "images/vbmeta_system.img",
+      "target": "vbmeta_system_a",
+      "size": 65536,
+      "sha256": "ca208759de4ed312d5603ea858048c94fce2ff4f35b013830c12a1238f2b1bc8",
+      "modified": true,
+      "role": "Final custom payload"
+    },
+    {
+      "archive": "images/vbmeta_vendor.img",
+      "target": "vbmeta_vendor_a",
+      "size": 65536,
+      "sha256": "9aa8b65e6d852e7938dc40cc79d42c76a71c85c3bad0b141c9755ba004b0590b",
+      "modified": true,
+      "role": "Final custom payload"
+    },
+    {
+      "archive": "images/boot.img",
+      "target": "boot_a",
+      "size": 67108864,
+      "sha256": "3f229d202969fdd67b0e34d2dc9fbb457d2cdcd58a674b31133564c5fc977c0f",
+      "modified": false,
+      "role": "Preserved OEM boot/recovery/module reference; no default flash"
+    },
+    {
+      "archive": "images/init_boot.img",
+      "target": "init_boot_a",
+      "size": 8388608,
+      "sha256": "de7c6d8c1bb0702efe88a218dedc809e1a73395ab0408b3a79995ba46a8cb640",
+      "modified": false,
+      "role": "Preserved OEM boot/recovery/module reference; no default flash"
+    },
+    {
+      "archive": "images/vendor_boot.img",
+      "target": "vendor_boot_a",
+      "size": 33554432,
+      "sha256": "f31d3594382f85256978563cb5550887fcf5980691f6485b9294e9e5845614d0",
+      "modified": false,
+      "role": "Preserved OEM boot/recovery/module reference; no default flash"
+    },
+    {
+      "archive": "images/dtbo.img",
+      "target": "dtbo_a",
+      "size": 2097152,
+      "sha256": "776e47ff8f1dbfbeda74d885c076db63b90b5cf37f0c7bf4df1e95b8f4a3a8ec",
+      "modified": false,
+      "role": "Preserved OEM boot/recovery/module reference; no default flash"
+    },
+    {
+      "archive": "images/system_dlkm.img",
+      "target": "system_dlkm_a",
+      "size": 495616,
+      "sha256": "2777adc2b8f0479b586e38462ff75a6a279e09ed7c6c79d56c71c0ad59d121dc",
+      "modified": false,
+      "role": "Preserved OEM boot/recovery/module reference; no default flash"
+    },
+    {
+      "archive": "images/vendor_dlkm.img",
+      "target": "vendor_dlkm_a",
+      "size": 15118336,
+      "sha256": "c95a7aa6c5a04821c13c5e0c1549e0775642e30c1e9c9084bbfc36430b913ace",
+      "modified": false,
+      "role": "Preserved OEM boot/recovery/module reference; no default flash"
+    },
+    {
+      "archive": "resources/bootloader_a.img",
+      "target": "bootloader_a",
+      "size": 33554432,
+      "sha256": "284fc6f6c87b292d671367ae1af98683b95b1b4e6e872e490651b2916f5c15d9",
+      "modified": true,
+      "role": "Only FAT graphics resources, not executable U-Boot/TOC; separate DSU writer; unlocked-state graphic replaced with Central splash; static charging fallback graphics updated; initial charging frame black"
+    }
+  ],
+  "resource_revision": 4,
+  "boot_visual_update": {
+    "only_file_changed": "orange_warning.bmp pixel content",
+    "delay_seconds_approximately": 5,
+    "delay_removed": false,
+    "real_uboot_modified": false,
+    "charging_path_uses_same_graphic": true,
+    "physical_early_screen_observed_by_agent": false,
+    "charging_with_power_off_physically_tested": true,
+    "full_resource_readback_verified": true,
+    "normal_android_boot_verified": true,
+    "physical_screen_confirmed_by_user": true
+  },
+  "charging_fallback_update": {
+    "replaced": [
+      "bat/battery_charge.bmp",
+      "bat/battery.bmp",
+      "bat/bempty.bmp",
+      "bat/bootlogo.bmp"
+    ],
+    "connection_frame": "Approved charger frame 0, rotated 270 degrees to native panel orientation",
+    "all_32_fat_files_verified": true,
+    "full_resource_readback_verified": true,
+    "gpt_uboot_and_inactive_resource_unchanged": true,
+    "charging_control_or_temperature_warnings_changed": false,
+    "physical_charging_validation_after_this_update": true
+  },
+  "initial_charging_frame_update": {
+    "file": "bat/battery_charge.bmp",
+    "pixels": "all black, header preserved",
+    "reason": "User prefers black before Central splash and measured charging percentage",
+    "all_other_31_fat_files_unchanged": true,
+    "full_resource_readback_verified": true,
+    "gpt_uboot_and_inactive_resource_unchanged": true,
+    "charging_logic_and_delays_changed": false,
+    "physical_charging_validation_after_this_update": false
+  }
+}

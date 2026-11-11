@@ -1,0 +1,9 @@
+{
+  "bundle": "T307F-Central-Inteligente-v3-particoes.zip",
+  "size": 1156783101,
+  "sha256": "ee8ab269738765f5dab7e7a113a6698b920b0088d7cd12fe8ee7c80cd10f6cf1",
+  "resource_revision": 4,
+  "all_13_payloads_roundtrip_hash_verified": true,
+  "previous_bundle_sha256": "01b91891f10cfc59582b36abe1d1a466a4a5bbda09df6b5bd332addae215fb80",
+  "private_keys_excluded": true
+}
